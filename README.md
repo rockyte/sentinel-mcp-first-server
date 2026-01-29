@@ -309,29 +309,3 @@ Next up:
 
 ```
 
----
-
-# ✅ What You Should Do Next (Quick)
-
-### 1. Add the screenshots folder:
-
-```
-
-screenshots/
-
-````
-
-### 2. Upload the 5 screenshots using the filenames above
-
-### 3. Commit and push:
-
-```bash
-git add .
-git commit -m "Add full blog README + screenshots"
-git push
-````
-
----
-
-
-**“Make this repo MVP-level polished with banners + prompt pack.”**
