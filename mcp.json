@@ -1,0 +1,9 @@
+{
+	"servers": {
+		"my-mcp-server-YOURNAME": {
+			"url": "https://sentinel.microsoft.com/mcp/triage",
+			"type": "http"
+		}
+	},
+	"inputs": []
+}
