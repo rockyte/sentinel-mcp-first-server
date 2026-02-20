@@ -1,14 +1,14 @@
-# 🚀 Setting Up My First Microsoft Sentinel MCP Server  
+# Setting Up My First Microsoft Sentinel MCP Server  
 ### (Using the Official Hosted TRIAGE Endpoint)
 
 > **Author:** Tarik Elkhatib  
 > **Focus:** Microsoft Sentinel + MCP + AI Security Automation  
 > **Use Case:** SOC Triage + Alert Trend Dashboards  
-> **Status:** Working ✅
+> **Status:** Working 
 
 ---
 
-## 📌 Overview
+## Overview
 
 If you’ve been watching the rise of **LLM-powered security workflows**, you’ve probably heard about the **Model Context Protocol (MCP)** — a new standard that allows AI agents to securely interact with real security tooling.
 
@@ -16,16 +16,16 @@ Recently, I set up my very first **Microsoft Sentinel MCP server integration** i
 
 Within minutes, I was:
 
-✅ Running live Sentinel triage queries  
-✅ Generating automated summaries  
-✅ Building interactive security dashboards  
-✅ Turning an AI agent into a SOC assistant  
+Running live Sentinel triage queries  
+Generating automated summaries  
+Building interactive security dashboards  
+Turning an AI agent into a SOC assistant  
 
 This write-up documents exactly what I did, the issues I hit, and the real-world use case that made it click.
 
 ---
 
-## ✅ What is Microsoft Sentinel MCP?
+## What is Microsoft Sentinel MCP?
 
 Microsoft Sentinel MCP is a hosted tool collection that allows AI agents (Copilot, Claude, etc.) to interact with Sentinel through natural language.
 
@@ -43,14 +43,14 @@ This is one of the clearest examples of how SOC workflows are evolving into **co
 
 ---
 
-## 🎯 Why I Wanted This
+## Why I Wanted This
 
 My goal was simple:
 
-✅ Set up Sentinel MCP successfully  
-✅ Confirm live query execution  
-✅ Build a real SOC reporting workflow  
-✅ Turn AI into a Sentinel triage assistant  
+Set up Sentinel MCP successfully  
+Confirm live query execution  
+Build a real SOC reporting workflow  
+Turn AI into a Sentinel triage assistant  
 
 This wasn’t just experimentation — I wanted something operational.
 
@@ -75,7 +75,7 @@ At first, I tried connecting to the **data exploration** endpoint:
 
 ---
 
-## 🚧 Step 2 — The Problem: Data Lake Was Not Enabled
+## Step 2 — The Problem: Data Lake Was Not Enabled
 
 Immediately, I hit an error:
 
@@ -84,7 +84,7 @@ TenantNotFound — Tenant not registered
 Error 404 connecting…
 ```
 
-📸 Screenshot:
+Screenshot:
 
 ![Tenant Error](./screenshots/02-tenant-not-found-error.png)
 
@@ -92,7 +92,7 @@ This turned out to be an important lesson:
 
 ---
 
-### ✅ The Data Exploration MCP Endpoint Depends on Sentinel Data Lake
+### The Data Exploration MCP Endpoint Depends on Sentinel Data Lake
 
 The **data-exploration** MCP endpoint is tied to Microsoft Sentinel Data Lake onboarding.
 
@@ -104,7 +104,7 @@ So in my case, the fix was simple:
 
 ---
 
-## ✅ Step 3 — Correct Fix: Use the Official Sentinel TRIAGE MCP Endpoint
+## Step 3 — Correct Fix: Use the Official Sentinel TRIAGE MCP Endpoint
 
 Since I didn’t have Data Lake enabled, I updated my configuration to the supported triage endpoint:
 
@@ -119,7 +119,7 @@ Since I didn’t have Data Lake enabled, I updated my configuration to the suppo
 }
 ```
 
-📸 Screenshot:
+Screenshot:
 
 ![MCP JSON Triage Config](./screenshots/01-mcp-json-triage.png)
 
@@ -136,19 +136,19 @@ The triage endpoint is designed for:
 
 And once I made this change…
 
-✅ MCP server connected immediately
-✅ Tools were discovered successfully
-✅ AI agents could begin executing Sentinel workflows
+MCP server connected immediately
+Tools were discovered successfully
+AI agents could begin executing Sentinel workflows
 
 ---
 
-## ✅ Successful MCP Connection
+## Successful MCP Connection
 
 Once connected, VS Code confirmed:
 
-* MCP running ✅
-* Tools discovered ✅
-* Queries executing ✅
+* MCP running 
+* Tools discovered 
+* Queries executing 
 
 📸 Screenshot:
 
@@ -164,11 +164,11 @@ Once MCP was active, I opened Copilot Chat in **Agent mode** and asked:
 
 The agent immediately executed Sentinel triage queries through MCP:
 
-✅ Ran `RunAdvancedHuntingQuery`
-✅ Retrieved alert activity by day
-✅ Summarized high-severity detections
+Ran `RunAdvancedHuntingQuery`
+Retrieved alert activity by day
+Summarized high-severity detections
 
-📸 Screenshot:
+Screenshot:
 
 ![Agent Running Query](./screenshots/04-agent-running-query.png)
 
@@ -178,7 +178,7 @@ This was the moment it clicked:
 
 ---
 
-## 📊 Step 5 — Real Use Case: Weekly Alert Activity Dashboard
+## Step 5 — Real Use Case: Weekly Alert Activity Dashboard
 
 Instead of stopping at raw KQL output, I wanted a real deliverable:
 
@@ -202,13 +202,13 @@ Example output:
 
 Key insight:
 
-✅ Peak high-severity alert volume on January 27
-✅ Alerts were consistently HIGH severity
-✅ Clear triage pattern worth deeper investigation
+Peak high-severity alert volume on January 27
+Alerts were consistently HIGH severity
+Clear triage pattern worth deeper investigation
 
 ---
 
-## ✨ Step 6 — Improving Interactivity (Hover Tooltips + Legend)
+## Step 6 — Improving Interactivity (Hover Tooltips + Legend)
 
 At first, the chart looked good — but it wasn’t fully interactive.
 
@@ -218,18 +218,18 @@ So I asked:
 
 The updated dashboard now included:
 
-✅ Hover tooltips
-✅ Legend explaining alert types
-✅ Chart interpretation section
-✅ True SOC-ready visualization
+Hover tooltips
+Legend explaining alert types
+Chart interpretation section
+True SOC-ready visualization
 
-📸 Screenshot:
+Screenshot:
 
 ![Final Dashboard](./screenshots/05-final-dashboard.png)
 
 ---
 
-## 🔥 Why Sentinel MCP Matters for SOC Teams
+## Why Sentinel MCP Matters for SOC Teams
 
 This workflow unlocks an entirely new Sentinel operating model:
 
@@ -253,7 +253,7 @@ This is:
 
 ---
 
-## 🛡️ Practical Sentinel MCP Triage Use Cases
+## Practical Sentinel MCP Triage Use Cases
 
 Once connected, the triage endpoint enables workflows like:
 
@@ -279,7 +279,7 @@ Once connected, the triage endpoint enables workflows like:
 
 ---
 
-## ✅ Final Thoughts
+## Final Thoughts
 
 Setting up my first Sentinel MCP server showed me the next evolution of SOC operations:
 
@@ -294,7 +294,7 @@ And the biggest lesson:
 
 ---
 
-## 🚀 What I’m Building Next
+## What I’m Building Next
 
 Next up:
 
@@ -305,6 +305,6 @@ Next up:
 
 ---
 
-⭐ If you found this useful, feel free to fork or adapt.
+If you found this useful, feel free to fork or adapt.
 
 ```
